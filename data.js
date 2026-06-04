@@ -132,8 +132,23 @@ const TEAM = [
 const EVENTS = [
   {title:"Valentine's Donation Drive", date:"2026-02-14", type:"Outreach", location:"Quezon City Public Library",
    map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.148672586482!2d121.04803847408132!3d14.64750067592869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b618b3c5831f%3A0xe08fd29cb0305f63!2sQuezon%20City%20Public%20Library!5e0!3m2!1sen!2sph!4v1770736620776!5m2!1sen!2sph"},
-  {title:"Philippine Book Festival 2026", date:"2026-03-12", type:"Book Fair", location:"Megatrade Hall, SM Megamall",
-   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2789262683973!2d121.05223857044979!3d14.58317574636838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9aed7b13797%3A0x35daf238542b2320!2sMegatrade%20Hall!5e0!3m2!1sen!2sph!4v1770736516761!5m2!1sen!2sph"}
+  {title:"Philippine Book Festival 2026", date:"2026-03-12", type:"Book Fair", location:"Booth BO28 (Booktopia), Megatrade Hall, SM Megamall",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2789262683973!2d121.05223857044979!3d14.58317574636838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9aed7b13797%3A0x35daf238542b2320!2sMegatrade%20Hall!5e0!3m2!1sen!2sph!4v1770736516761!5m2!1sen!2sph"},
+  {title:"Chronicle of a Life Untold: A Testament to Hope", date:"2026-02-24", type:"Book Launch", location:"NGF Conference Room, De la Costa Hall, ADMU QC",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2806841802553!2d121.0767891!3d14.6400019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b77fa8beeb4b%3A0xf2e14d01ef111be!2sHumanities%20Building%3A%20Horacio%20de%20la%20Costa%20Hall!5e0!3m2!1sen!2sph!4v1780470668288!5m2!1sen!2sph"},
+  {title:"Awit ng Debosyon", date:"2026-03-23", type:"Outreach", location:"QC Hall High Rise Building Lobby, Quezon City",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1668372282575!2d121.0475173101833!3d14.646469075893966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b70950b66739%3A0xa0f8a709cb1843a7!2sQuezon%20City%20Hall!5e0!3m2!1sen!2sph!4v1780470829364!5m2!1sen!2sph"},
+  {title:"International Women's Day Bazaar", date:"2026-03-24", type:"Book Fair", location:"33rd Floor, AIA Tower, Paseo de Roxas, Makati City",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.729221843948!2d121.02177669999999!3d14.557471099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c906767e32e7%3A0x7313fa82decaeffc!2sAIA%20Tower!5e0!3m2!1sen!2sph!4v1780470884297!5m2!1sen!2sph"},
+  {title:"Día del Libro 2026", date:"2026-04-25", type:"Book Fair", location:"Booth 38, Ayala Triangle Gardens, Makati",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7723.4732089615245!2d121.0244961!3d14.557049300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c905c953e8df%3A0xd3d03ade4df31dab!2sAyala%20Triangle%20Gardens!5e0!3m2!1sen!2sph!4v1780471134733!5m2!1sen!2sph"},
+  {title:"Many Marias: Callas by Lecaroz", date:"2026-05-15", type:"Exhibition", location:"Carlos P. Romulo Auditorium Lobby, RCBC Tower, Makati",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.6739665778973!2d121.01364501018183!3d14.560627677996344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c90961db7ab5%3A0xc5094954bbb7c0e6!2sCarlos%20P.%20Romulo%20Auditorium!5e0!3m2!1sen!2sph!4v1780471276537!5m2!1sen!2sph"},
+  {title:"Santelmo 14: Cultures of EDSA", date:"2026-05-23", type:"Book Launch", location:"Faura Hall Audio-Visual Room, ADMU QC",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.291663897598!2d121.07168554132993!3d14.639378039781874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b77fa0102f49%3A0x534df5430b34684c!2sFaura%20AVR!5e0!3m2!1sen!2sph!4v1780471400025!5m2!1sen!2sph"},
+  {title:"Manila International Book Fair 2026", date:"2026-09-09", type:"Book Fair", location:"SMX Convention Center Manila, Mall of Asia Complex, Pasay City",
+   map:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7724.347641496409!2d120.98170010000001!3d14.532048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c967bab80a71%3A0xcf52fb438feb5a6c!2sSMX%20Convention%20Center%20Manila!5e0!3m2!1sen!2sph!4v1780471829387!5m2!1sen!2sph"}
+];
 ];
 
 const BOOKS_PER_SHELF = 8;
