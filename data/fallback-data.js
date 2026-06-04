@@ -94,9 +94,10 @@ const BOOKS = [
    blurb:"[Blurb here.]"},
   {id:"b49", title:"Farewells",                              author:"Mike Doria (Ed.)", category:"Poetry",              year:2025, price:200,  stock:-1, isbn:"",              lang:"English & Filipino", img:"images/Farewells.webp",
    blurb:"[Blurb here.]"}
-,
   {id:"b50", title:"Audit is Life: Santelmo 12 Special Feature", author:"Various writers", category:"Journal", year:2025, price:200, stock:-1, isbn:"", lang:"English & Filipino", img:"", gumroad:"https://sananselmopress.gumroad.com/l/wlxyig",
    blurb:"Santelmo 12 Special Feature on auditing and accountability."},
+  {id:"b51", title:"Buhay at Banyuhay: Mga Kuwentong may Kuwenta",                              author:"Xiao Chua", category:"Non-Fiction",              year:2025, price:600,  stock:-1, isbn:"",              lang:"Filipino", img:"images/Buhay at Banyuhay.webp",
+   blurb:"[Blurb here.]"},
 ];
 
 const AUTHORS = [
