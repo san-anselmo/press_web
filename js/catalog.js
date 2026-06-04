@@ -82,7 +82,7 @@ function renderCard(b) {
     aria-label="${b.title}${ad ? ' by ' + ad : ''}">
     <div class="book-cover-wrap">
       ${imgSrc ? `<img class="book-cover-img" src="${imgSrc}" alt="Cover of ${b.title}"
-           loading="lazy" decoding="async"
+           loading="eager" decoding="async"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` : ''}
       <div class="bk-placeholder" style="${imgSrc ? 'display:none' : 'display:flex'}" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity=".35"><path d="${_SVG.book}"/></svg>
