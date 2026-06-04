@@ -11,7 +11,7 @@ function renderAuthorGrid(authors, books) {
     const cnt = books.filter(b => (b.author && b.author.includes(key)) || (b.editor && b.editor.includes(key))).length;
     return `<div class="author-row" role="listitem" onclick="viewAuthorOnPage('${a.name.replace(/'/g, "\\'")}')" tabindex="0" onkeydown="if(event.key==='Enter')viewAuthorOnPage('${a.name.replace(/'/g, "\\'")}')">
       <div style="display:flex;align-items:center;gap:.85rem;min-width:0">
-        <div class="author-row-avatar">${a.img ? `<img src="${a.img}" alt="${a.name}" loading="lazy" decoding="async" onerror="this.parentElement.textContent='${initials(a.name)}'">` : initials(a.name)}</div>
+        <div class="author-row-avatar">${a.img ? `<img src="${a.img}" alt="${a.name}" loading="eager" decoding="async" onerror="this.parentElement.textContent='${initials(a.name)}'">` : initials(a.name)}</div>
         <div style="min-width:0"><div class="author-row-name">${a.name}</div><div class="author-row-bio">${a.bio}</div></div>
       </div>
       <div style="display:flex;align-items:center;gap:.7rem;flex-shrink:0">
@@ -30,14 +30,14 @@ window.viewAuthorOnPage = function(name) {
   const books = _authBooks.filter(b => (b.author && b.author.includes(key)) || (b.editor && b.editor.includes(key)));
 
   document.getElementById('amAvatar').innerHTML = a.img
-    ? `<img src="${a.img}" alt="${a.name}" loading="lazy" onerror="this.parentElement.textContent='${initials(a.name)}'">`
+    ? `<img src="${a.img}" alt="${a.name}" loading="eager" onerror="this.parentElement.textContent='${initials(a.name)}'">`
     : initials(a.name);
   document.getElementById('amName').textContent = a.name;
   document.getElementById('amBio').textContent = a.bio;
   document.getElementById('amBooks').innerHTML = books.length
     ? books.map(b => `<div role="listitem" onclick="window.location.href='index.html?book=${b.id}'" style="cursor:pointer" tabindex="0" onkeydown="if(event.key==='Enter')window.location.href='index.html?book=${b.id}'">
         <div style="aspect-ratio:2/3;background:var(--ash-light);border-radius:2px 8px 8px 2px;overflow:hidden;box-shadow:var(--shadow-book);margin-bottom:.4rem">
-          ${b.img ? `<img src="${b.img}" alt="${b.title}" loading="lazy" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='<div style=\\'display:flex;align-items:center;justify-content:center;height:100%;color:var(--sepia);font-size:.6rem;text-align:center;padding:.3rem\\'>${b.title}</div>'">` : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sepia);font-size:.6rem;text-align:center;padding:.3rem">${b.title}</div>`}
+          ${b.img ? `<img src="${b.img}" alt="${b.title}" loading="eager" style="width:100%;height:100%;object-fit:cover" onerror="this.parentElement.innerHTML='<div style=\\'display:flex;align-items:center;justify-content:center;height:100%;color:var(--sepia);font-size:.6rem;text-align:center;padding:.3rem\\'>${b.title}</div>'">` : `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sepia);font-size:.6rem;text-align:center;padding:.3rem">${b.title}</div>`}
         </div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:var(--fs-sm);line-height:1.2;color:var(--ink)">${b.title}</div>
       </div>`).join('')
