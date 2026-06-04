@@ -93,7 +93,9 @@ const BOOKS = [
   {id:"b48", title:"Happy",                                  author:"Mike Doria (Ed.)", category:"Poetry",              year:2025, price:200,  stock:-1, isbn:"",              lang:"English & Filipino", img:"images/Happy.webp",
    blurb:"[Blurb here.]"},
   {id:"b49", title:"Farewells",                              author:"Mike Doria (Ed.)", category:"Poetry",              year:2025, price:200,  stock:-1, isbn:"",              lang:"English & Filipino", img:"images/Farewells.webp",
-   blurb:"[Blurb here.]"}
+   blurb:"[Blurb here.]"},
+   {id:"b50", title:"Buhay at Banyuhay: Mga Kuwentong may Kuwenta",                              author:"Xiao Chua", category:"Non-Fiction",              year:2025, price:600,  stock:-1, isbn:"",              lang:"Filipino", img:"images/Buhay at Banyuhay.webp",
+   blurb:"[Blurb here.]"},
 ];
 
 const AUTHORS = [
