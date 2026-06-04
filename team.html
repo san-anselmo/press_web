@@ -43,7 +43,7 @@
       if (grid) {
         grid.innerHTML = teamData.map(t =>
           `<div class="team-card" role="listitem">
-            <div class="team-avatar" aria-hidden="true">${t.img ? `<img src="${t.img}" alt="${t.name}" loading="lazy" decoding="async" onerror="this.parentElement.textContent='${initials(t.name)}'">` : initials(t.name)}</div>
+            <div class="team-avatar" aria-hidden="true">${t.img ? `<img src="${t.img}" alt="${t.name}" loading="eager" decoding="async" onerror="this.parentElement.textContent='${initials(t.name)}'">` : initials(t.name)}</div>
             <div class="team-name">${t.name}</div>
             <div class="team-role">${t.role}</div>
           </div>`
