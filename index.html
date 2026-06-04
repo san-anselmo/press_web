@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="San Anselmo Publications, Inc. — Browse our complete catalog of Filipino literature, poetry, fiction, and journals. Preserving the Filipino intellect.">
+  <title>San Anselmo Publications — Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="navContainer"></div>
+
+  <div class="page-body">
+    <main class="main-content" id="mainContent" role="main">
+      <section class="content-section active" aria-label="Book Catalog">
+        <div class="section-inner">
+          <header class="page-header">
+            <div class="page-eyebrow">Catalog · As of June 2026</div>
+            <h1 class="page-title">Our <span class="accent">Publications</span></h1>
+            <p class="page-subtitle">Philippine literature, arts &amp; socio-political thought</p>
+          </header>
+          <div class="filter-bar">
+            <span class="filter-label">Genre</span>
+            <div class="genre-tags" id="genreCloud" role="group" aria-label="Filter by genre"></div>
+          </div>
+          <div id="catalogGrid" role="list" aria-label="Book catalog"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Book Detail Modal -->
+  <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <article class="modal-card">
+      <div class="modal-close">
+        <button class="modal-close-btn" onclick="closeModal('detailModal')" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="det-eyebrow" id="mCategory"></div>
+        <div class="bk-det-grid">
+          <div>
+            <img id="mCover" src="" alt="Book cover" class="det-cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="det-cover-ph" style="display:none" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="var(--sepia)"><path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1z"/></svg></div>
+          </div>
+          <div>
+            <h2 class="det-title" id="mTitle"></h2>
+            <div class="det-author" id="mAuthor"></div>
+            <div class="det-meta-grid">
+              <div><div class="det-meta-label">Stocks</div><div id="mStock"></div></div>
+              <div><div class="det-meta-label">Year</div><div class="det-meta-value" id="mYear"></div></div>
+              <div id="mIsbnWrap"><div class="det-meta-label">ISBN / ISSN</div><div class="det-meta-value" id="mISBN"></div></div>
+              <div><div class="det-meta-label">Language</div><div class="det-meta-value" id="mLang"></div></div>
+            </div>
+            <p class="det-desc" id="mBlurb"></p>
+            <div class="det-action-row">
+              <div>
+                <div class="det-price-label">Price</div>
+                <div class="det-price-value" id="mPrice"></div>
+              </div>
+              <div class="det-buttons-wrap">
+                <div id="mGumroadWrap" style="display:none">
+                  <a id="mGumroadBtn" href="#" target="_blank" rel="noopener" class="btn-primary" style="background:linear-gradient(90deg,#36465D,#4A6FA5);box-shadow:0 3px 12px rgba(54,70,93,.35)">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    Buy Digital Edition
+                  </a>
+                </div>
+                <a href="https://www.facebook.com/sananselmopress" target="_blank" rel="noopener" class="btn-primary">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.9 18 9 18h12v-2H9.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0023.45 5H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                  Order Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Author Modal -->
+  <div class="modal-overlay" id="authorModal" role="dialog" aria-modal="true" aria-labelledby="amName">
+    <article class="modal-card">
+      <div class="modal-close"><button class="modal-close-btn" onclick="closeModal('authorModal')" aria-label="Close">×</button></div>
+      <div class="modal-body">
+        <div class="am-header">
+          <div class="am-avatar" id="amAvatar" aria-hidden="true"></div>
+          <div><div class="am-name" id="amName"></div><div class="am-bio" id="amBio"></div></div>
+        </div>
+        <div class="det-meta-label" style="margin-bottom:.7rem;letter-spacing:.12em">Publications</div>
+        <div class="am-books" id="amBooks" role="list"></div>
+      </div>
+    </article>
+  </div>
+
+  <div id="backToTopContainer"></div>
+
+
+
+  <script src="data/fallback-data.js"></script>
+  <script src="js/sheets-cms.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
